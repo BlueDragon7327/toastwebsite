@@ -158,6 +158,15 @@
         .social-link:hover {
             text-decoration: underline;
         }
+        .temp-link {
+            display: none; /* Initially hidden */
+            color: #ff3333; /* Light Red */
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+        .temp-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -200,13 +209,23 @@
             <div class="social-links">
                 <a href="https://discord.gg/jsyZPmY4" class="social-link"><i class="fab fa-discord"></i> Discord Server</a>
                 <a href="https://github.com/bpr1ch3" class="social-link"><i class="fab fa-github"></i> GitHub</a>
-               <a href="why" class="social-link"><i class="fab fa-code"></i> ...</a>
+                <a href="why" class="temp-link"><i class="fas fa-code"></i> ...</a>
             </div>
         </div>
     </div>
 
-    <script>
-        // add anything if you want, btw the entire website is css + html based so thats cool
-    </script>
+<script>
+    function showTemporaryLink() {
+        const link = document.getElementById('temp-link');
+        link.style.display = 'inline'; // Show the link
+
+        setTimeout(() => {
+            link.style.display = 'none'; // Hide the link after 2 seconds
+        }, 2000); // 2000 milliseconds = 2 seconds
+    }
+
+    // Call the function to show the link
+    showTemporaryLink();
+</script>
 </body>
 </html>
