@@ -218,17 +218,19 @@
     </div>
 
 <script>
-    function showTemporaryLink() {
-        const link = document.getElementById('temp-link');
-        link.style.display = 'inline'; // Show the link
+    document.addEventListener('DOMContentLoaded', () => {
+        function showTemporaryLink() {
+            const link = document.getElementById('temp-link');
+            link.style.display = 'inline'; // Show the link
 
-        setTimeout(() => {
-            link.style.display = 'none'; // Hide the link after 2 seconds
-        }, 2000); // 2000 milliseconds = 2 seconds
-    }
+            setTimeout(() => {
+                link.style.display = 'none'; // Hide the link after 2 seconds
+            }, 2000); // 2000 milliseconds = 2 seconds
+        }
 
-    // Call the function to show the link
-    showTemporaryLink();
+        // Call the function to show the link
+        showTemporaryLink();
+    });
 </script>
 </body>
 </html>
